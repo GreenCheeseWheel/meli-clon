@@ -1,0 +1,13 @@
+.main {
+    position: relative;
+    width: 100vw;
+}
+
+.filter {
+    position: absolute;
+    width: 100vw;
+    min-height: 100%;
+    transition: all 300ms step-end;
+    pointer-events: none;
+}
+

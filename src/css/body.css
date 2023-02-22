@@ -1,0 +1,15 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    background-color: rgba(230, 230, 230, 1);
+    overflow: scroll;
+    font-family:'Proxima Nova', 'Roboto', -apple-system, sans-serif;
+}
+
+img {
+    z-index: 0;
+}
