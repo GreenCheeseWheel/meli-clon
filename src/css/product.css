@@ -8,6 +8,7 @@
     margin: auto;
     padding-top: 10px;
     background-color: snow;
+    
 }
 
 .product--container {
@@ -40,6 +41,12 @@
 .product--description---text {
     
         width: 95%;
+}
+
+
+.description--item.rating {
+    color: #3486fa;
+    font-size: 14px;
 }
 
 .description {
@@ -84,6 +91,8 @@
 .description--item---payment {
     font-size: 13px;
     text-decoration: none;
+    color:#3a56ff;
+    cursor: pointer;
 }
 
 .description--item---title {
@@ -94,7 +103,7 @@
 .product--description---list {
     list-style-type: disc;
     width: 100%;
-    padding-left: auto;
+    padding: 0;
     display: flex;
     flex-direction: column;
     
@@ -450,6 +459,7 @@
 .description--foot {
     color:rgb(105, 105, 105);
     font-size: 20px;
+    margin-top: 4rem;
 }
 
 .description--foot---title {

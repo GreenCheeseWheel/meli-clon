@@ -21,9 +21,13 @@ export default function Navbar()
     };
 
     const mouseLeaveHandler = (event) => {
-
-        document.getElementsByClassName("dropdown").item(0).style = "opacity: 0; pointer-events: none;";
-        document.getElementsByClassName("filter").item(0).style = "background-color: rgba(0, 0, 0, 0); z-index: 0;"
+        
+        
+            console.log(event.target);
+            document.getElementsByClassName("dropdown").item(0).style = "opacity: 0; pointer-events: none;";
+            document.getElementsByClassName("filter").item(0).style = "background-color: rgba(0, 0, 0, 0); z-index: 0;"
+        
+        
     }
 
 
@@ -57,13 +61,15 @@ export default function Navbar()
 
 
 
-                            <a className="navbar--links---item----dropdown" > 
-                                <span className="navbar--categories" onMouseOver={mouseOverHandler}>Categorías <img src={arrow} width="12" height="11"></img></span>
+                            <a className="navbar--links---item----dropdown" onMouseOver={mouseOverHandler} > 
+                                <span className="navbar--categories" >Categorías <img src={arrow} width="12" height="11"></img></span>
                                 <div className="dropdown" onMouseLeave={mouseLeaveHandler}>
                                     <a className="dropdown--item">Vehículos</a>
                                     <a className="dropdown--item">Inmuebles</a>
                                     <a className="dropdown--item">Supermercados</a>
-                                    <a className="dropdown--item">Tecnología</a>
+                                    <a className="dropdown--item"> Tecnología</a>
+                                    
+                                    
                                     <a className="dropdown--item">Hogar y Muebles</a>
                                     <a className="dropdown--item">Electrodomésticos</a>
                                     <a className="dropdown--item">Herramientas</a>

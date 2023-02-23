@@ -32,7 +32,9 @@ import {RiSmartphoneLine} from "react-icons/ri"
 import {CgSmartphoneChip} from "react-icons/cg"
 import {SlScreenSmartphone} from "react-icons/sl"
 import {IoFingerPrint} from "react-icons/io5"
-
+import {FaStar} from "react-icons/fa"
+import {FaStarHalf} from "react-icons/fa"
+import Related from "./Related";
 
 
 export default function Product()
@@ -56,8 +58,12 @@ export default function Product()
     }
 
     return (
+        
+        <>
+        <Related />
 
         <section className="product">
+            
             <section className="product--container">
                 <div className="product--description">
                     <div className="product--description---photo">
@@ -85,7 +91,7 @@ export default function Product()
 
                                     <h2 className="description--title">TCL 30 SE 128 GB space gray 4 GB RAM</h2>
                                 </li>
-                                <li className="description--item">star star star star star (442)</li>
+                                <li className="description--item rating"><FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStarHalf /> (442)</li>
                                 <li className="description--item price">
                                     <s className="item--price---before">
                                         <span>$</span>
@@ -104,7 +110,7 @@ export default function Product()
                                     </div>
 
                                     <div>
-                                        <a href="#" className="description--item---payment"> <p>Ver los medios de pago</p> </a>
+                                        <a className="description--item---payment"> <p>Ver los medios de pago</p> </a>
                                     </div>
 
                                     
@@ -137,7 +143,7 @@ export default function Product()
                 { /* Seccion para características del producto */ }
                 
                 <div className="product--characteristic---display">
-                    <div className="product--characteristic---title" style={{width: "100%"}}>
+                    <div className="product--characteristic---title" >
                         <p>Características de TCL 30 SE</p>
                     </div>
                     
@@ -277,6 +283,7 @@ export default function Product()
 
             <div></div>
         </section>
+        </>
 
     );
 

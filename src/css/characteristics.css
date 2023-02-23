@@ -1,8 +1,8 @@
 .product--characteristic---display {
-    width: 80%;
+    width: 90%;
     margin: auto;
 
-
+    border-top: 1px solid rgba(205, 205, 205, .5);
     text-align: left;
 }
 
@@ -14,8 +14,11 @@
 }
 
 .product--characteristic---title {
+    width: 100%;
     font-size: 22px;
     word-spacing: 4px;
+
+    
 }
 
 .product--characteristic---content {

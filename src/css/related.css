@@ -1,0 +1,63 @@
+.related {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+
+    width: 1200px;
+    margin: auto;
+}
+
+.related--division {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+.related--division---listcontain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.related--return {
+    color: black;
+}
+
+.related--list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    list-style: none;
+    padding: 0;
+    
+    color: #3a56ff;
+}
+
+.related--list li:not(.separator) {
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.separator {
+    cursor: text;
+    color: rgb(110, 110, 110);
+}
+
+.related--link {
+    color: black;
+    
+}
+
+.related--interaction {
+    color: #3a56ff;
+    margin: 0 10px;
+    cursor: pointer;
+}
