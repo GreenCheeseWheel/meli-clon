@@ -97,6 +97,7 @@
     background-color: white;
     border: 0;
     box-shadow: 0 .5px 2px grey;
+    cursor: pointer;
 }
 
 .navbar--disney---offer {
@@ -175,7 +176,8 @@
 .navbar--links---item {
     margin-right: 22px;
     font-size: 13px;
-    
+    height: 30px;
+
     cursor: pointer;
 }
 
@@ -234,6 +236,8 @@
 .dropdown {
     position: absolute;
     width: 260px;
+    min-height: 120vh;
+
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -269,6 +273,64 @@
 .dropdown--item:hover {
     background-color: #3a56ff;
 }
+
+
+.technology--dropdown {
+    width: 800px;
+    min-height: 825px;
+    
+    top: 0;
+    left: 100%;
+    position: absolute;
+    
+    border-collapse: collapse;
+    background-color: snow;
+    color: rgba(55, 55, 55, .8);
+    border: 1px solid #3486fa;
+    cursor: default;
+    opacity: 0;
+}
+
+.technology--dropdown---title {
+    width: 90%;
+    margin: auto;
+    color: black;
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+
+    margin-bottom: 1rem;
+
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+}
+
+.technology--dropdown---array {
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.technology--dropdown---list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+}
+
+.technology--dropdown---list li {
+    margin: .6rem 0;
+    cursor: pointer;
+}
+
+.technology--dropdown---list li:first-child {
+    color: black;
+    font-size: 16px;
+}
+
 
 @media screen and (max-width: 1200px) {
     

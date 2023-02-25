@@ -15,6 +15,7 @@ export default function Navbar()
 
     const mouseOverHandler = (event) => {
         const dropdownMenu = event.target.nextElementSibling;
+
         dropdownMenu.style = "opacity: 1; pointer-events: all;";
         document.getElementsByClassName("filter").item(0).style = "background-color: rgba(0, 0, 0, .3); z-index: 1;"
 
@@ -23,7 +24,6 @@ export default function Navbar()
     const mouseLeaveHandler = (event) => {
         
         
-            console.log(event.target);
             document.getElementsByClassName("dropdown").item(0).style = "opacity: 0; pointer-events: none;";
             document.getElementsByClassName("filter").item(0).style = "background-color: rgba(0, 0, 0, 0); z-index: 0;"
         
@@ -57,19 +57,60 @@ export default function Navbar()
 
 
                     <ul className="navbar--links">
-                        <li className="navbar--links---item"  onMouseLeave={mouseLeaveHandler}>   
+                        <li className="navbar--links---item"  onMouseLeave={mouseLeaveHandler} >   
 
 
 
-                            <a className="navbar--links---item----dropdown" onMouseOver={mouseOverHandler} > 
-                                <span className="navbar--categories" >Categorías <img src={arrow} width="12" height="11"></img></span>
+                            <a className="navbar--links---item----dropdown"  > 
+                                <span className="navbar--categories" onMouseOver={mouseOverHandler} >Categorías <img src={arrow} width="12" height="11"></img></span>
                                 <div className="dropdown" onMouseLeave={mouseLeaveHandler}>
+                                    
+                                <div className="technology--dropdown">
+                                            <p className="technology--dropdown---title">Tecnología</p>
+                                            <div className="technology--dropdown---array">
+                                                <ul className="technology--dropdown---list">
+                                                    <li>Celulares y teléfonos</li>
+                                                    <li>Celulares y smartphones</li>
+                                                    <li>Accesorios para celulares</li>
+                                                </ul>
+                                                <ul className="technology--dropdown---list">
+                                                    <li>Cámaras y accesorios</li>
+                                                    <li>Cámaras digitales</li>
+                                                    <li>Accesorios para cámaras</li>
+                                                </ul>
+                                                <ul className="technology--dropdown---list">
+                                                    <li>Consolas y videojuegos</li>
+                                                    <li>Videojuegos</li>
+                                                    <li>Para playstation</li>
+                                                </ul>
+                                                <ul className="technology--dropdown---list">
+                                                    <li>Computación</li>
+                                                    <li>Componentes de PC</li>
+                                                    <li>Impresión</li>
+                                                    <li>Tablets y accesorios</li>
+                                                    <li>PC</li>
+                                                </ul>
+                                                <ul className="technology--dropdown---list">
+                                                    <li>Electrónica, audio y video</li>
+                                                    <li>Audio</li>
+                                                    <li>Accesorios para audio y video</li>
+                                                    <li>Componentes electrónicos</li>
+                                                    <li>Drones y accesorios</li>
+                                                </ul>
+                                                <ul className="technology--dropdown---list">
+                                                    <li>Televisores</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+
+
                                     <a className="dropdown--item">Vehículos</a>
                                     <a className="dropdown--item">Inmuebles</a>
                                     <a className="dropdown--item">Supermercados</a>
-                                    <a className="dropdown--item"> Tecnología</a>
-                                    
-                                    
+                                    <a className="dropdown--item" onMouseEnter={ () => { document.getElementsByClassName("technology--dropdown").item(0).style = "opacity: 1;"}}>  Tecnología {">"} </a>
                                     <a className="dropdown--item">Hogar y Muebles</a>
                                     <a className="dropdown--item">Electrodomésticos</a>
                                     <a className="dropdown--item">Herramientas</a>
