@@ -4,6 +4,8 @@ import {TfiSearch} from "react-icons/tfi"
 import {GrLocation} from "react-icons/gr"
 import {CgShoppingCart} from "react-icons/cg"
 
+
+
 import meliLogo from "../assets/meli.png"
 import meliDisney from "../assets/disney-plus.webp"
 import arrow from "../assets/down-arrow.png"
@@ -28,6 +30,18 @@ export default function Navbar()
             document.getElementsByClassName("filter").item(0).style = "background-color: rgba(0, 0, 0, 0); z-index: 0;"
         
         
+    }
+
+    const technoDissapear = (event) => {
+        if(event.target.classList.contains("technology--dropdown")) 
+        {
+            document.getElementsByClassName("technology--dropdown").item(0).style = "opacity: 0; pointer-events: none;";
+            
+        }
+        else if(event.target.classList.contains("dropdown--item")) 
+        {
+
+        }
     }
 
 
@@ -65,7 +79,7 @@ export default function Navbar()
                                 <span className="navbar--categories" onMouseOver={mouseOverHandler} >Categorías <img src={arrow} width="12" height="11"></img></span>
                                 <div className="dropdown" onMouseLeave={mouseLeaveHandler}>
                                     
-                                <div className="technology--dropdown">
+                                    <div className="technology--dropdown" onMouseLeave={technoDissapear}>
                                             <p className="technology--dropdown---title">Tecnología</p>
                                             <div className="technology--dropdown---array">
                                                 <ul className="technology--dropdown---list">
@@ -101,7 +115,7 @@ export default function Navbar()
                                                     <li>Televisores</li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                    </div>
 
 
 
@@ -110,7 +124,7 @@ export default function Navbar()
                                     <a className="dropdown--item">Vehículos</a>
                                     <a className="dropdown--item">Inmuebles</a>
                                     <a className="dropdown--item">Supermercados</a>
-                                    <a className="dropdown--item" onMouseEnter={ () => { document.getElementsByClassName("technology--dropdown").item(0).style = "opacity: 1;"}}>  Tecnología {">"} </a>
+                                    <a className="dropdown--item" onMouseLeave={technoDissapear} onMouseEnter={ () => { document.getElementsByClassName("technology--dropdown").item(0).style = "opacity: 1;"}}>  Tecnología {">"} </a>
                                     <a className="dropdown--item">Hogar y Muebles</a>
                                     <a className="dropdown--item">Electrodomésticos</a>
                                     <a className="dropdown--item">Herramientas</a>

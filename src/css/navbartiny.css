@@ -1,0 +1,153 @@
+.navbartiny {
+    display: inline-block;
+
+    width: 1220px;
+    height: 100px;
+    
+    padding: 0;
+
+    z-index: 2;
+
+    background-color: rgba(255, 255, 51, .82);
+}
+
+.navbartiny--logo {
+    height: 34px;
+    margin: 12px 0 0 0;
+}
+
+
+
+.navbartiny--container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbartiny--search {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    height: 40px;
+    width: fit-content;
+    padding-top: 9px;
+}
+
+
+.navbartiny--search---input {
+    width: 850px;
+    height: 39px;
+
+    display: inline;
+    border-collapse: collapse;
+    
+    background-color: white;
+    text-indent: 8px;
+    border: 0;
+    outline: none;
+
+    font-size: 14px;
+    font-weight: 520;
+    color: rgba(0 ,0 , 0 , .8);
+
+    box-shadow: 0 .5px 2px grey;
+
+
+}
+
+.navbartiny--search---submit {
+    height: var(--navbar-item-height);
+    width: 45px;
+
+    display: inline;
+    border-collapse: collapse;
+
+    background-color: white;
+    border: 0;
+    box-shadow: 0 .5px 2px grey;
+    cursor: pointer;
+}
+
+.burgermenu {
+    width: 19px;
+    height: 19px;
+
+    grid-column: 3 / 4;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+}
+
+.linebar {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(35 ,35, 35);
+    transition: 500ms;
+}
+
+.linebar1_anim{
+    transform: translateY(9px) translateX(4px) rotateZ(45deg);
+}
+
+.linebar2_anim{
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.linebar3_anim{
+    transform: translateY(-8px) translateX(4px) rotateZ(-45deg);
+}
+
+
+.shopping-cart { 
+    font-size: 23px;
+    
+}
+
+.enviar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 7px;
+    margin-top: 10px;
+
+    text-align: left;
+    font-size: 12px;
+    color:rgb(35 ,35, 35);
+    border-top: 1px solid rgba(0 ,0 , 0 , .25);
+    cursor: pointer;
+}
+
+.enviar div {
+    align-items: center;
+}
+
+.enviar--logo {
+    font-size: 16px;
+}
+
+.enviar--arrow {
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+    border-top: 1px solid rgb(35 ,35, 35);
+    border-right: 1px solid rgb(35 ,35, 35);
+    transform: rotateZ(45deg);
+}

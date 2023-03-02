@@ -28,7 +28,6 @@
     width: fit-content;
     margin-left: 5px;
     
-    
 }
 
 .navbar--block:nth-child(2) {
@@ -331,16 +330,3 @@
     font-size: 16px;
 }
 
-
-@media screen and (max-width: 1200px) {
-    
-    .navbar--disney---offer {
-        display: none;
-    }
-
-    .navbar {
-        width: 1200px;
-    }
-
-
-}
