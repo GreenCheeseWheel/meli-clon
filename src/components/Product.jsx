@@ -38,8 +38,11 @@ import Related from "./Related";
 
 
 export default function Product()
-{
+{   
     
+    const [currImage, setCurrImage] = useState(phoneFront);
+    const [display, setDisplay] = useState("none");
+    const [bkgPos, setBkgPos] = useState("0% 0%");
     const [heartFilled, setHeartFilled] = useState(heartInactive);
 
 
@@ -53,9 +56,27 @@ export default function Product()
 
     const changeProductDisplay = (event) => {
         const targetImage = event.target.src;
+        setCurrImage(targetImage);
         document.getElementsByClassName("gallery--display---photo").item(0).src = targetImage;
 
     }
+
+    const imageZoomHandler = (event) => {
+       
+        setDisplay("block");
+        
+        
+        const target = event.target;
+        
+        const rect = target.getBoundingClientRect();
+
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        console.log(x);
+        setBkgPos(`${80*x/235}% ` + `${100*y/500}%`);
+    }
+
 
     return (
         
@@ -64,6 +85,8 @@ export default function Product()
 
         <section className="product">
             
+            <div className="image--card" style={{backgroundImage: `url(${currImage})`, backgroundPosition: bkgPos, display: display}}></div>
+
             <section className="product--container">
                 <div className="product--description">
                     <div className="product--description---photo">
@@ -76,7 +99,7 @@ export default function Product()
 
                             </div>
                             
-                            <img height="500" width="235"  src={phoneFront} className="gallery--display---photo"></img>
+                            <img height="500" width="235" onMouseMove={imageZoomHandler} onMouseLeave={() => {setDisplay("none");}} src={phoneFront} className="gallery--display---photo"></img>
                                 
                             
                         </div>

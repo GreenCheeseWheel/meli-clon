@@ -1,4 +1,5 @@
 .product {
+    position: relative;
     display: flex;
     flex-direction: row;
     
@@ -9,6 +10,17 @@
     padding-top: 10px;
     background-color: snow;
     
+}
+
+.image--card {
+    position: absolute;
+    left: 575px;
+    width: 500px;
+    aspect-ratio: .8;
+    z-index: 3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
 }
 
 .product--container {
